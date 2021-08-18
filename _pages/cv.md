@@ -10,9 +10,9 @@ redirect_from:
 {% include base_path %}
 
 ## Education
-- 09. 2012-06. 2016，Xiamen University，Bachelor of Science
-- 09. 2018-now，Xiamen University, Ph.D. student
-- 09. 2019-now，University of Delaware & Xiamen University, dual degree Ph.D. student
+- September 2012- June 2016，Xiamen University，Bachelor of Science
+- September 2018 - now，Xiamen University, Ph.D. student
+- September 2019 - now，University of Delaware & Xiamen University, dual degree Ph.D. student
 
 ## Fellowship
 2018, Excellent Doctoral Scholarship, The State Key Laboratory of Marine Environmental Science (MEL)
