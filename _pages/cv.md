@@ -9,51 +9,17 @@ redirect_from:
 
 {% include base_path %}
 
-Education
-======
-* B.S. in GitHub, GitHub University, 2012
-* M.S. in Jekyll, GitHub University, 2014
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
+## Education
+- 09. 2012-06. 2016，Xiamen University，Bachelor of Science
+- 09. 2018-now，Xiamen University, Ph.D. student
+- 09. 2019-now，University of Delaware & Xiamen University, dual degree Ph.D. student
 
-Work experience
-======
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+## Fellowship
+2018, Excellent Doctoral Scholarship, The State Key Laboratory of Marine Environmental Science (MEL)
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
-
-Publications
-======
-  <ul>{% for post in site.publications %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks %}
-    {% include archive-single-talk-cv.html %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+## Publications
+### 2021
+- Wang, T., Yu, P., Wu, Z., Lu, W., Liu, X., Li, Q. P., & Huang, B. (2021). Revisiting the Intraseasonal Variability of Chlorophyll-a in the Adjacent Luzon Strait With a New Gap-Filled Remote Sensing Data Set. IEEE Transactions on Geoscience and Remote Sensing, 1–11. https://doi.org/10.1109/TGRS.2021.3067646
+### 2020
+- Huang, J., Zhuang, W., Yan, X.-H., & Wu, Z. (2020). Impacts of the upper-ocean salinity variations on the decadal sea level change in the Southeast Indian Ocean during the Argo era. Acta Oceanologica Sinica, 39(7), 1–10. https://doi.org/10.1007/s13131-020-1574-4
+- Zheng, Z., Zhuang, W., Hu, J., Wu, Z., & Liu, C. (2020). Surface water exchanges in the Luzon Strait as inferred from Lagrangian coherent structures. Acta Oceanologica Sinica, 39(11), 21–32. https://doi.org/10.1007/s13131-020-1677-y
