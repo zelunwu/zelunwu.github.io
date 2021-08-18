@@ -7,8 +7,6 @@ redirect_from:
   - /resume
 ---
 
-{% include base_path %}
-
 ## Education
 - September 2012- June 2016，Xiamen University，Bachelor of Science
 - September 2018 - now，Xiamen University, Ph.D. student
