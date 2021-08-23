@@ -6,4 +6,4 @@ tags:
   - statistics
   - methods
 ---
-[EOF_Tutorial.pdf](files/tutorial-EOF-ZLWu.pdf)
+[EOF_Tutorial.pdf](/files/tutorial-EOF-ZLWu.pdf)
