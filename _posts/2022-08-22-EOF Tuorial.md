@@ -1,7 +1,7 @@
 ---
 title: 'EOF Tutorial'
 date: 2021-08-18
-permalink: /posts/EOF_tutorial.md
+permalink: /posts/EOF_tutorial/
 tags:
   - statistics
   - methods
