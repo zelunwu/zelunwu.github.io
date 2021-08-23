@@ -9,3 +9,4 @@ tags:
 
 This is a sample blog post. Lorem ipsum I can't remember the rest of lorem ipsum and don't have an internet connection right now. Testing testing testing this blog post. Blog posts are cool.
 ![EOF_file](/files/paper1.pdf){width=75%}.
+<object data="/files/paper1.pdf" width="1000" height="1000" type="application/pdf"></object>
