@@ -1,20 +1,7 @@
 ---
-title: "portfolio-1"
-excerpt: "EOF Toolbox for climate research"
+title: "Portfolio item number 1"
+excerpt: "Short description of portfolio item number 1"
 collection: portfolio
 ---
-# Empirical Orthogonal Function Toolbox
- EOF decomposition for oceanic/atmospheric data
-## Functions
-eof : Emperical Orthogonal Functions (Principle Component Analysis)
-meof: Multivariable EOF.
-More EOF functions like Trend-EOF will be added in the future.
 
-[GitHub Repository](https://github.com/zelunwu/eof)
-[Download](https://github.com/zelunwu/eof/releases)
-
-## Author
-**Zelun Wu**
-zelunwu@stu.xmu.edu.cn, zelunwu@udel.edu
-College of Ocean and Earth Sicence, Xiamen University
-College of Earth, Ocean and Environment, University of Delaware
+This is an item in your portfolio. It can be have images or nice text. If you name the file .md, it will be parsed as markdown. If you name the file .html, it will be parsed as HTML. 
