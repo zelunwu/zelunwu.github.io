@@ -5,19 +5,17 @@ collection: portfolio
 ---
 
 ## Empirical Orthogonal Function Toolbox
-EOF decomposition for oceanic/atmospheric data
-
-[Github Repository](https://github.com/zelunwu/eof)
-
-[Download](https://github.com/zelunwu/eof/releases)
+EOF decomposition for oceanic/atmospheric data<br>
+[Github Repository](https://github.com/zelunwu/eof)<br>
+[Download](https://github.com/zelunwu/eof/releases)<br>
 
 ### Functions
 - eof : Emperical Orthogonal Functions (Principle Component Analysis)
 - meof: Multivariable EOF.
-More EOF functions like Trend-EOF will be added in the future.
+More EOF functions like Trend-EOF will be added in the future.<br>
 
 ### Author
-Zelun Wu
-zelunwu@stu.xmu.edu.cn, zelunwu@udel.edu
-College of Ocean and Earth Sicence, Xiamen University
-College of Earth, Ocean and Environment, University of Delaware
+Zelun Wu<br>
+zelunwu@stu.xmu.edu.cn, zelunwu@udel.edu<br>
+College of Ocean and Earth Sicence, Xiamen University<br>
+College of Earth, Ocean and Environment, University of Delaware<br>
