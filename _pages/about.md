@@ -9,4 +9,5 @@ redirect_from:
 ---
  {% include base_path %}
  
-I am Zelun Wu, a dual-degree Ph.D. student of University of Delaware and Xiamen University. My advisor is Dr.Wei-Jun Cai, and my research interests include Climate Change, Carbon Cycle, and Extreme Events.
+I am Zelun Wu, a dual-degree Ph.D. student of University of Delaware and Xiamen University under Dr.Wei-Jun Cai's instruction. <br>
+My research interests include the biogeochemical processes of **Climate Change, Carbon Cycle, and Extreme Events**.
