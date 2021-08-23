@@ -10,5 +10,5 @@ This paper used the SOCAT and other underways measurements to calculate the air-
 
 ## Questions:
 ### 1. how did they calculate the pCO_2_sea climatology?
-[Figure_1.png](https://github.com/zelunwu/zelunwu.github.io/blob/447cb3ac18d146c4cf8e6c94f16f0d8068823223/_posts/images/Evans_GBC_2015_Fig_1.png)
+![Figure_1.png](https://github.com/zelunwu/zelunwu.github.io/blob/447cb3ac18d146c4cf8e6c94f16f0d8068823223/_posts/images/Evans_GBC_2015_Fig_1.png)
 
