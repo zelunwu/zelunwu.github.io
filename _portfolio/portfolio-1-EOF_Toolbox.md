@@ -1,5 +1,6 @@
 ---
 title: "EOF Toolbox"
+excerpt: "EOF Toolbox for climate research"
 collection: portfolio
 ---
 
