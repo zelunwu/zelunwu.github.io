@@ -3,7 +3,6 @@ title: "EOF Toolbox"
 excerpt: "EOF Toolbox for climate research"
 collection: portfolio
 ---
-
 # Empirical Orthogonal Function Toolbox
  EOF decomposition for oceanic/atmospheric data
 ## Functions
