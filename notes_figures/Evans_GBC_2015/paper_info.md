@@ -1,0 +1,1 @@
+Evans, W., Mathis, J. T., Cross, J. N., Bates, N. R., Frey, K. E., Else, B. G. T., et al. (2015). Sea‐air CO 2 exchange in the western Arctic coastal ocean. Global Biogeochemical Cycles, 29(8), 1190–1209. https://doi.org/10.1002/2015GB005153
