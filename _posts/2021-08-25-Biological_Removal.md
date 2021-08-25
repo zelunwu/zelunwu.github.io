@@ -25,9 +25,9 @@ tags:
 - Coastal ocean is CO2 sink
 
 6. Cooley, S. R., & Yager, P. L. (2006). Physical and biological contributions to the western tropical North Atlantic Ocean carbon sink formed by the Amazon River plume. Journal of Geophysical Research, 111(C8), C08018. https://doi.org/10.1029/2005JC002954
-- Concentrations of DIC and TA in surface samples (0–10 m) influenced by the Amazon River plume were up to 400 mmol C kg􏰟1 (􏰊20%) lower than oceanic surface samples.
+- Concentrations of DIC and TA in surface samples (0–10 m) influenced by the Amazon River plume were up to 400 mmol C kg1 (20%) lower than oceanic surface samples.
 - supporting a link between increased carbon drawdown and nitrogen fixation in the outer plume.
-- - 
+- 
 
 7. Cai, W., Chen, C. A., & Borges, A. (2013). Carbon dioxide dynamics and ﬂuxes in coastal waters inﬂuenced by river plumes. In Biogeochemical Dynamics at Major River-Coastal Interfaces, edited by: Bianchi, TS, Allison MA, and Cai, W.-J., Cambridge University Press, Cambridge (pp. 155–173).
 
