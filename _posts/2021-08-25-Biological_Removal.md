@@ -38,10 +38,13 @@ tags:
 9. Huang, Wei-Jen, Cai, W.-J., Wang, Y., Lohrenz, S. E., & Murrell, M. C. (2015). The carbon dioxide system on the Mississippi River-dominated continental shelf in the northern Gulf of Mexico: 1. Distribution and air-sea CO2 flux. Journal of Geophysical Research: Oceans, 120(3), 1429–1445. https://doi.org/10.1002/2014JC010498
 
 10. Huang, W.-J., Cai, W.-J., Powell, R. T., Lohrenz, S. E., Wang, Y., Jiang, L.-Q., & Hopkinson, C. S. (2012). The stoichiometry of inorganic carbon and nutrient removal in the Mississippi River plume and adjacent continental shelf. Biogeosciences, 9(7), 2781–2792. https://doi.org/10.5194/bg-9-2781-2012
-
+- Despite complex physical and biogeochemical influences, relationships between DIC and nutrients were strongly dependent on salinity range and geographic location, and influenced by biological removal.
+- Lower C / Si and N / Si ratios in one nearshore area were likely due to localized input of high Si and low NO3 water from adjacent wetlands or preferential removal of nitrogen in the area.
 
 11. Lehrter, J. C., Ko, D. S., Murrell, M. C., Hagy, J. D., Schaeffer, B. A., Greene, R. M., et al. (2013). Nutrient distributions, transports, and budgets on the inner margin of a river-dominated continental shelf: Louisiana Shelf Nutrient Dynamics. Journal of Geophysical Research: Oceans, 118(10), 4822–4838. https://doi.org/10.1002/jgrc.20362
-
+- On average, 47% of the lower Mississippi River freshwater traveled westward on the LCS, but this percentage was reduced during summer when currents reversed to a predominately upcoast direction.
+- Changes from mainly inorganic to organic nutrients were observed at salinity between 20 and 30
+- Westward transport of dissolved inorganic nitrogen (DIN) was about 25% of the combined DIN load from the MARB,
 
 12. Lohrenz, S. E., Cai, W.-J., Chen, F., Chen, X., & Tuel, M. (2010). Seasonal variability in air-sea fluxes of CO2 in a river-influenced coastal margin. Journal of Geophysical Research, 115(C10), C10034. https://doi.org/10.1029/2009JC005608
 -  Strong cross‐shelf gradients in pCO2 were observed during August 2004 and April 2006, influenced by river outflow.
