@@ -19,7 +19,7 @@ tags:
 - Highest values of primary production occurred at stations where surface nutrient concentrations exhibited large deviations from conservative mixing relationships, indicating that depletion of nutrients was related to phytoplankton uptake. 
 
 4. Dagg, M. J., & Breed, G. A. (2003). Biological effects of Mississippi River nitrogen on the northern gulf of Mexico—a review and synthesis. Journal of Marine Systems, 43(3–4), 133–152. https://doi.org/10.1016/j.jmarsys.2003.09.002
-- The Mississippi River currently delivers approximately 1.82 Tg N year􏰟 1 (1.3 􏰏 1011 mol N year􏰟 1) to the northern Gulf of Mexico.
+- The Mississippi River currently delivers approximately 1.82 Tg N /year (1.3* 10^11 mol N/year) to the northern Gulf of Mexico.
 
 5. Cai, W.-J., Dai, M., & Wang, Y. (2006). Air-sea exchange of carbon dioxide in ocean margins: A province-based synthesis. Geophysical Research Letters, 33(12), L12603. https://doi.org/10.1029/2006GL026219
 - 
