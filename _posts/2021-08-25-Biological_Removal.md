@@ -27,15 +27,16 @@ tags:
 6. Cooley, S. R., & Yager, P. L. (2006). Physical and biological contributions to the western tropical North Atlantic Ocean carbon sink formed by the Amazon River plume. Journal of Geophysical Research, 111(C8), C08018. https://doi.org/10.1029/2005JC002954
 - Concentrations of DIC and TA in surface samples (0–10 m) influenced by the Amazon River plume were up to 400 mmol C kg1 (20%) lower than oceanic surface samples.
 - supporting a link between increased carbon drawdown and nitrogen fixation in the outer plume.
-- 
 
 7. Cai, W., Chen, C. A., & Borges, A. (2013). Carbon dioxide dynamics and ﬂuxes in coastal waters inﬂuenced by river plumes. In Biogeochemical Dynamics at Major River-Coastal Interfaces, edited by: Bianchi, TS, Allison MA, and Cai, W.-J., Cambridge University Press, Cambridge (pp. 155–173).
 
 
 8. Guo, X., Cai, W.-J., Huang, W.-J., Wang, Y., Chen, F., Murrell, M. C., et al. (2012). Carbon dynamics and community production in the Mississippi River plume. Limnology and Oceanography, 57(1), 1–17. https://doi.org/10.4319/lo.2012.57.1.0001
-
+- DIC removal was accompanied by high DO, high pH, and nutrient depletion, and was attributed to high phytoplankton production.
+- Biological production was the dominant process influencing pH and carbonate saturation state along the river–ocean gradient, whereas physicochemical dynamics of mixing played an important role in controlling the TAlk and DIC distributions of this large river plume.
 
 9. Huang, Wei-Jen, Cai, W.-J., Wang, Y., Lohrenz, S. E., & Murrell, M. C. (2015). The carbon dioxide system on the Mississippi River-dominated continental shelf in the northern Gulf of Mexico: 1. Distribution and air-sea CO2 flux. Journal of Geophysical Research: Oceans, 120(3), 1429–1445. https://doi.org/10.1002/2014JC010498
+
 10. Huang, W.-J., Cai, W.-J., Powell, R. T., Lohrenz, S. E., Wang, Y., Jiang, L.-Q., & Hopkinson, C. S. (2012). The stoichiometry of inorganic carbon and nutrient removal in the Mississippi River plume and adjacent continental shelf. Biogeosciences, 9(7), 2781–2792. https://doi.org/10.5194/bg-9-2781-2012
 
 
@@ -43,10 +44,12 @@ tags:
 
 
 12. Lohrenz, S. E., Cai, W.-J., Chen, F., Chen, X., & Tuel, M. (2010). Seasonal variability in air-sea fluxes of CO2 in a river-influenced coastal margin. Journal of Geophysical Research, 115(C10), C10034. https://doi.org/10.1029/2009JC005608
-
+-  Strong cross‐shelf gradients in pCO2 were observed during August 2004 and April 2006, influenced by river outflow.
 
 13. Salisbury, J. E., Vandemark, D., Hunt, C. W., Campbell, J. W., McGillis, W. R., & McDowell, W. H. (2008). Seasonal observations of surface waters in two Gulf of Maine estuary-plume systems: Relationships between watershed attributes, optical measurements and surface pCO2. Estuarine, Coastal and Shelf Science, 77(2), 245–252. https://doi.org/10.1016/j.ecss.2007.09.033
-
+- pCO2 concentrations were associated with high f-chl and c-660.
+- Results suggest that labile riverine carbon is responsible for sustaining supersaturated pCO2 conditions and that phytoplankton productivity, likely driven by inputs of riverine dissolved inorganic nitrogen, is responsible for pCO2 undersaturation.
 
 14. Tseng, C.-M., Liu, K.-K., Gong, G.-C., Shen, P.-Y., & Cai, W.-J. (2011). CO 2 uptake in the East China Sea relying on Changjiang runoff is prone to change: THE ECS CO 2 UPTAKE IS PRONE TO CHANGE. Geophysical Research Letters, 38(24), n/a-n/a. https://doi.org/10.1029/2011GL049774
-
+- biological sequestration of CO2 taking place in the highly productive Changjiang river plume in warm seasons due to the riverine nutrient enrichment.
+- As the Discharge may decrease due to the Three Gorges Dam operation, the Changjiang plume will probably also decrease, resulting in reduction in CO2 uptake capacity and even a shift from a CO2 sink to a source. 
