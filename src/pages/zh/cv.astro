@@ -1,0 +1,55 @@
+---
+import PublicationList from '../../components/PublicationList.astro';
+import SectionHeading from '../../components/SectionHeading.astro';
+import Timeline from '../../components/Timeline.astro';
+import { publications, siteContent } from '../../content/site';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const { education, experience, focusAreas, profile } = siteContent.zh;
+---
+
+<BaseLayout
+  locale="zh"
+  title="履历 · 吴泽伦"
+  description="吴泽伦的公开网页履历。"
+>
+  <header class="cv-header page-shell">
+    <div>
+      <p class="eyebrow">个人履历</p><h1>
+        {profile.name}
+        <span>{profile.nameZh}</span>
+      </h1><p>{profile.headline}</p>
+    </div><div class="cv-links">
+      {profile.links.map((link) => <a href={link.href}>{link.label} ↗</a>)}
+    </div>
+  </header>
+  <section class="section page-shell cv-section">
+    <SectionHeading eyebrow="经历" title="职业经历" /><Timeline
+      items={experience}
+    />
+  </section>
+  <section class="section page-shell cv-section">
+    <SectionHeading eyebrow="教育" title="教育背景" /><Timeline
+      items={education}
+    />
+  </section>
+  <section class="section page-shell cv-section">
+    <SectionHeading eyebrow="专长" title="研究与工程方向" /><div
+      class="cv-skills"
+    >
+      {
+        focusAreas.map((area) => (
+          <div>
+            <h3>{area.title}</h3>
+            <p>{area.description}</p>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+  <section class="section page-shell cv-section">
+    <SectionHeading eyebrow="研究" title="论文" /><PublicationList
+      items={publications}
+      locale="zh"
+    />
+  </section>
+</BaseLayout>

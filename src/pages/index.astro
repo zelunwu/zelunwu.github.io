@@ -1,15 +1,10 @@
 ---
-import HeroVisual from '../components/HeroVisual.astro';
 import PublicationList from '../components/PublicationList.astro';
 import SectionHeading from '../components/SectionHeading.astro';
 import WorkCard from '../components/WorkCard.astro';
-import {
-  focusAreas,
-  profile,
-  publications,
-  selectedWork,
-} from '../content/site';
+import { publications, siteContent } from '../content/site';
 import BaseLayout from '../layouts/BaseLayout.astro';
+const { focusAreas, profile, selectedWork } = siteContent.en;
 ---
 
 <BaseLayout>
@@ -28,30 +23,25 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <span>{profile.nameZh}</span><span>{profile.location}</span>
       </div>
     </div>
-    <HeroVisual />
-  </section>
-
-  <section class="section page-shell" aria-labelledby="focus-heading">
-    <SectionHeading
-      eyebrow="Focus"
-      title="One practice, multiple scales"
-      description="My work moves between physical systems, scientific models, graphics architecture, and GPU execution."
-    />
-    <div class="focus-grid" id="focus-heading">
+    <div class="hero-index" aria-label="Research areas">
       {
         focusAreas.map((area) => (
-          <article class="focus-card">
-            <>
-              <p>{area.eyebrow}</p>
-              <h3>{area.title}</h3>
-              <div class="focus-line" />
+          <article>
+            <p>{area.eyebrow}</p>
+            <div>
+              <h2>{area.title}</h2>
               <span>{area.description}</span>
-            </>
+            </div>
           </article>
         ))
       }
     </div>
   </section>
+
+  <div class="home-work-strip page-shell" aria-label="Selected work summary">
+    <span>Selected work</span>
+    {selectedWork.map((item) => <strong>{item.title}</strong>)}
+  </div>
 
   <section class="section section-tint" aria-labelledby="work-heading">
     <div class="page-shell">
@@ -76,11 +66,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section class="section page-shell" aria-labelledby="publications-heading">
     <SectionHeading
       eyebrow="Research"
-      title="Selected publications"
-      description="Peer-reviewed work in coastal carbon dynamics, remote sensing, and physical oceanography."
+      title="Recent publications"
+      description={`The complete publication record contains ${publications.length} peer-reviewed papers.`}
     />
     <div id="publications-heading">
-      <PublicationList items={publications.slice(0, 3)} />
+      <PublicationList items={publications.slice(0, 5)} />
     </div>
     <a class="text-link section-link" href="/publications/"
       >View all selected publications <span aria-hidden="true">→</span></a

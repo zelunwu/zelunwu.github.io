@@ -1,0 +1,95 @@
+---
+import PublicationList from '../../components/PublicationList.astro';
+import SectionHeading from '../../components/SectionHeading.astro';
+import WorkCard from '../../components/WorkCard.astro';
+import { publications, siteContent } from '../../content/site';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const { focusAreas, profile, selectedWork } = siteContent.zh;
+---
+
+<BaseLayout locale="zh">
+  <section class="hero page-shell">
+    <div class="hero-copy">
+      <p class="eyebrow">图形系统 · 物理海洋学</p>
+      <h1>{profile.name}</h1>
+      <p class="hero-lead">{profile.introduction}</p>
+      <div class="hero-actions">
+        <a class="button primary" href="/zh/work/">查看代表工作</a><a
+          class="button secondary"
+          href="/zh/publications/">查看论文</a
+        >
+      </div>
+      <div class="hero-meta">
+        <span>{profile.nameZh}</span><span>{profile.location}</span>
+      </div>
+    </div>
+    <div class="hero-index" aria-label="研究方向">
+      {
+        focusAreas.map((area) => (
+          <article>
+            <p>{area.eyebrow}</p>
+            <div>
+              <h2>{area.title}</h2>
+              <span>{area.description}</span>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <div class="home-work-strip page-shell" aria-label="代表工作摘要">
+    <span>代表工作</span>
+    {selectedWork.map((item) => <strong>{item.title}</strong>)}
+  </div>
+
+  <section class="section section-tint" aria-labelledby="zh-work-heading">
+    <div class="page-shell">
+      <SectionHeading
+        eyebrow="代表工作"
+        title="图形系统与海洋科学"
+        description="精选公开产品和经同行评议的研究成果。"
+      />
+      <div class="work-grid" id="zh-work-heading">
+        {
+          selectedWork.map((item, index) => (
+            <WorkCard item={item} index={index} />
+          ))
+        }
+      </div>
+      <a class="text-link section-link" href="/zh/work/"
+        >查看全部代表工作 <span aria-hidden="true">→</span></a
+      >
+    </div>
+  </section>
+
+  <section class="section page-shell" aria-labelledby="zh-publications-heading">
+    <SectionHeading
+      eyebrow="研究"
+      title="近期论文"
+      description={`完整发表记录共包含 ${publications.length} 篇同行评议论文。`}
+    />
+    <div id="zh-publications-heading">
+      <PublicationList items={publications.slice(0, 5)} locale="zh" />
+    </div>
+    <a class="text-link section-link" href="/zh/publications/"
+      >查看全部论文 <span aria-hidden="true">→</span></a
+    >
+  </section>
+
+  <section class="closing-statement">
+    <div class="page-shell">
+      <p class="eyebrow">工作原则</p><blockquote>
+        理解物理系统，定义工程契约，用证据检验结果。
+      </blockquote><div class="closing-links">
+        {
+          profile.links.map((link) => (
+            <a href={link.href}>
+              {link.label} <span aria-hidden="true">↗</span>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>

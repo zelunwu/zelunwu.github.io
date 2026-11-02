@@ -26,7 +26,7 @@ src/
 ├── components/      Reusable presentation components
 ├── content/         Auditable public site data
 ├── layouts/         Shared document structure
-├── pages/           Route-level pages
+├── pages/           English routes and mirrored Simplified Chinese routes
 └── styles/          Global visual system and responsive rules
 public/              Static assets copied without processing
 docs/                Architecture and public-content policy
@@ -40,4 +40,3 @@ Changes are developed on an Issue-linked branch, reviewed in a pull request, and
 ## Public-content boundary
 
 This is a public repository. Site content is an explicit, reviewed public projection rather than a copy of any private career database. See [docs/content-policy.md](docs/content-policy.md).
-Personal website of Zelun Wu

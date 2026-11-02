@@ -1,8 +1,9 @@
 ---
 import SectionHeading from '../components/SectionHeading.astro';
 import WorkCard from '../components/WorkCard.astro';
-import { focusAreas, selectedWork } from '../content/site';
+import { siteContent } from '../content/site';
 import BaseLayout from '../layouts/BaseLayout.astro';
+const { focusAreas, selectedWork } = siteContent.en;
 ---
 
 <BaseLayout
