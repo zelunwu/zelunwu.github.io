@@ -1,0 +1,31 @@
+---
+import type { Publication } from '../content/site';
+type Props = { items: Publication[] };
+const { items } = Astro.props;
+---
+
+<div class="publication-list">
+  {
+    items.map((publication) => (
+      <article class="publication-item">
+        <>
+          <div class="publication-year">{publication.year}</div>
+          <div>
+            <>
+              <h3>
+                <a href={publication.href}>{publication.title}</a>
+              </h3>
+              <p class="publication-authors">{publication.authors}</p>
+              <p class="publication-meta">
+                <>
+                  <span>{publication.venue}</span>
+                  <span>{publication.contribution}</span>
+                </>
+              </p>
+            </>
+          </div>
+        </>
+      </article>
+    ))
+  }
+</div>

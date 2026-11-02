@@ -1,0 +1,19 @@
+---
+import type { SelectedWork } from '../content/site';
+type Props = { item: SelectedWork; index: number };
+const { item, index } = Astro.props;
+const Tag = item.href ? 'a' : 'article';
+---
+
+<Tag class="work-card" href={item.href}>
+  <div class="work-card-topline">
+    <span class="work-index">{String(index + 1).padStart(2, '0')}</span>
+    <span class="work-type">{item.type}</span>
+  </div>
+  <h3>{item.title}</h3>
+  <p>{item.description}</p>
+  <div class="work-detail">
+    <span>{item.detail}</span>
+    {item.href && <span aria-hidden="true">↗</span>}
+  </div>
+</Tag>
