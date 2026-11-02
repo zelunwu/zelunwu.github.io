@@ -2,14 +2,9 @@
 import PublicationList from '../components/PublicationList.astro';
 import SectionHeading from '../components/SectionHeading.astro';
 import Timeline from '../components/Timeline.astro';
-import {
-  education,
-  experience,
-  focusAreas,
-  profile,
-  publications,
-} from '../content/site';
+import { publications, siteContent } from '../content/site';
 import BaseLayout from '../layouts/BaseLayout.astro';
+const { education, experience, focusAreas, profile } = siteContent.en;
 ---
 
 <BaseLayout title="CV · Zelun Wu" description={`Web CV for ${profile.name}.`}>
@@ -52,9 +47,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
   <section class="section page-shell cv-section">
-    <SectionHeading
-      eyebrow="Research"
-      title="Selected publications"
-    /><PublicationList items={publications} />
+    <SectionHeading eyebrow="Research" title="Publications" /><PublicationList
+      items={publications}
+    />
   </section>
 </BaseLayout>

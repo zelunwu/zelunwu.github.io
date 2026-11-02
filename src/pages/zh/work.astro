@@ -1,0 +1,46 @@
+---
+import SectionHeading from '../../components/SectionHeading.astro';
+import WorkCard from '../../components/WorkCard.astro';
+import { siteContent } from '../../content/site';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const { focusAreas, selectedWork } = siteContent.zh;
+---
+
+<BaseLayout
+  locale="zh"
+  title="代表工作 · 吴泽伦"
+  description="图形系统和海洋科学领域的公开工作。"
+>
+  <header class="page-intro page-shell">
+    <p class="eyebrow">项目</p><h1>代表性公开工作</h1><p>
+      公开产品和经同行评议的研究成果，不包含保密实现细节或未经证实的性能结论。
+    </p>
+  </header>
+  <section class="section page-shell">
+    <div class="work-grid expanded">
+      {
+        selectedWork.map((item, index) => (
+          <WorkCard item={item} index={index} />
+        ))
+      }
+    </div>
+  </section>
+  <section class="section section-tint">
+    <div class="page-shell">
+      <SectionHeading eyebrow="能力" title="工作的内在联系" /><div
+        class="focus-grid"
+      >
+        {
+          focusAreas.map((area) => (
+            <article class="focus-card">
+              <p>{area.eyebrow}</p>
+              <h3>{area.title}</h3>
+              <div class="focus-line" />
+              <span>{area.description}</span>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>

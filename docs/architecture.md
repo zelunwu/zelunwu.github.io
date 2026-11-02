@@ -4,10 +4,10 @@ The site is a static Astro application. It intentionally has no database, runtim
 
 ## Boundaries
 
-- `src/content/site.ts` is the public content projection and the only place for structured personal facts.
+- `src/content/site.ts` is the public content projection and the only place for structured personal facts. It stores shared publication metadata and localized English and Simplified Chinese content.
 - `src/components/` renders reusable content units without owning personal data.
-- `src/pages/` composes routes and selects content.
-- `src/layouts/` owns document metadata, navigation, and shared page chrome.
+- `src/pages/` composes the English routes; `src/pages/zh/` mirrors them with reviewed Simplified Chinese copy.
+- `src/layouts/` owns localized document metadata, navigation, language alternates, and shared page chrome.
 - `src/styles/global.css` owns the visual system and responsive behavior.
 
 ## Deployment

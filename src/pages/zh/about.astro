@@ -1,0 +1,48 @@
+---
+import SectionHeading from '../../components/SectionHeading.astro';
+import Timeline from '../../components/Timeline.astro';
+import { siteContent } from '../../content/site';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const { education, experience, profile } = siteContent.zh;
+---
+
+<BaseLayout
+  locale="zh"
+  title="关于 · 吴泽伦"
+  description={profile.introduction}
+>
+  <header class="page-intro page-shell about-intro">
+    <div>
+      <p class="eyebrow">关于</p><h1>
+        {profile.name}<br /><span>{profile.nameZh}</span>
+      </h1>
+    </div><p>{profile.introduction}</p>
+  </header>
+  <section class="section page-shell">
+    <SectionHeading eyebrow="经历" title="系统与产品研发" /><Timeline
+      items={experience}
+    />
+  </section>
+  <section class="section section-tint">
+    <div class="page-shell">
+      <SectionHeading eyebrow="教育" title="海洋科学训练" /><Timeline
+        items={education}
+      />
+    </div>
+  </section>
+  <section class="section page-shell contact-block">
+    <SectionHeading
+      eyebrow="其他平台"
+      title="公开资料"
+      description="源代码和公开研究记录可通过以下平台查看。"
+    /><div class="profile-links">
+      {
+        profile.links.map((link) => (
+          <a class="button secondary" href={link.href}>
+            {link.label} <span aria-hidden="true">↗</span>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>

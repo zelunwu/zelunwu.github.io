@@ -1,8 +1,9 @@
 ---
 import SectionHeading from '../components/SectionHeading.astro';
 import Timeline from '../components/Timeline.astro';
-import { education, experience, profile } from '../content/site';
+import { siteContent } from '../content/site';
 import BaseLayout from '../layouts/BaseLayout.astro';
+const { education, experience, profile } = siteContent.en;
 ---
 
 <BaseLayout

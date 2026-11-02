@@ -1,63 +1,105 @@
 ---
 import '../styles/global.css';
-import { profile } from '../content/site';
+import { siteContent, type Locale } from '../content/site';
 
-type Props = { title?: string; description?: string };
-const {
-  title = `${profile.name} · ${profile.headline}`,
-  description = profile.introduction,
-} = Astro.props;
+type Props = {
+  locale?: Locale;
+  title?: string;
+  description?: string;
+};
+
+const { locale = 'en', title, description } = Astro.props;
+const content = siteContent[locale];
+const { profile } = content;
+const pageTitle = title ?? `${profile.name} · ${profile.headline}`;
+const pageDescription = description ?? profile.introduction;
 const currentPath = Astro.url.pathname;
-const navigation = [
-  { label: 'Home', href: '/' },
-  { label: 'Work', href: '/work/' },
-  { label: 'Publications', href: '/publications/' },
-  { label: 'About', href: '/about/' },
-  { label: 'CV', href: '/cv/' },
-];
+const isZh = locale === 'zh';
+const prefix = isZh ? '/zh' : '';
+const navigation = isZh
+  ? [
+      { label: '首页', href: '/zh/' },
+      { label: '项目', href: '/zh/work/' },
+      { label: '论文', href: '/zh/publications/' },
+      { label: '关于', href: '/zh/about/' },
+      { label: '履历', href: '/zh/cv/' },
+    ]
+  : [
+      { label: 'Home', href: '/' },
+      { label: 'Work', href: '/work/' },
+      { label: 'Publications', href: '/publications/' },
+      { label: 'About', href: '/about/' },
+      { label: 'CV', href: '/cv/' },
+    ];
+const alternatePath = isZh
+  ? currentPath.replace(/^\/zh(?=\/|$)/, '') || '/'
+  : `${prefix || '/zh'}${currentPath === '/' ? '/' : currentPath}`;
+const skipLabel = isZh ? '跳转到正文' : 'Skip to content';
+const navLabel = isZh ? '主导航' : 'Primary navigation';
+const externalLabel = isZh ? '外部链接' : 'External links';
+const homeLabel = isZh ? '吴泽伦，首页' : 'Zelun Wu, home';
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={isZh ? 'zh-CN' : 'en'}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="description" content={description} />
-    <meta name="theme-color" content="#f7f6f2" />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
+    <meta name="description" content={pageDescription} />
+    <meta name="theme-color" content="#f6f5ef" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={Astro.url} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="canonical" href={Astro.url} />
-    <title>{title}</title>
+    <link
+      rel="alternate"
+      hreflang={isZh ? 'en' : 'zh-CN'}
+      href={new URL(alternatePath, Astro.site)}
+    />
+    <title>{pageTitle}</title>
   </head>
   <body>
-    <a class="skip-link" href="#main-content">Skip to content</a>
+    <a class="skip-link" href="#main-content">{skipLabel}</a>
     <header class="site-header">
-      <a class="site-brand" href="/" aria-label="Zelun Wu, home"
+      <a
+        class="site-brand"
+        href={prefix ? `${prefix}/` : '/'}
+        aria-label={homeLabel}
         ><span class="brand-mark" aria-hidden="true">ZW</span><span
-          >{profile.name}</span
+          >{isZh ? '吴泽伦' : 'Zelun Wu'}</span
         ></a
       >
-      <nav class="site-nav" aria-label="Primary navigation">
-        {
-          navigation.map(({ label, href }) => {
-            const active =
-              href === '/' ? currentPath === '/' : currentPath.startsWith(href);
-            return (
-              <a href={href} aria-current={active ? 'page' : undefined}>
-                {label}
-              </a>
-            );
-          })
-        }
-      </nav>
+      <div class="header-actions">
+        <nav class="site-nav" aria-label={navLabel}>
+          {
+            navigation.map(({ label, href }) => {
+              const active =
+                href === '/' || href === '/zh/'
+                  ? currentPath === href
+                  : currentPath.startsWith(href);
+              return (
+                <a href={href} aria-current={active ? 'page' : undefined}>
+                  {label}
+                </a>
+              );
+            })
+          }
+        </nav>
+        <a
+          class="language-switch"
+          href={alternatePath}
+          hreflang={isZh ? 'en' : 'zh-CN'}
+        >
+          {isZh ? 'EN' : '中文'}
+        </a>
+      </div>
     </header>
     <main id="main-content"><slot /></main>
     <footer class="site-footer">
       <div><strong>{profile.name}</strong><span>{profile.headline}</span></div>
-      <nav aria-label="External links">
+      <nav aria-label={externalLabel}>
         {profile.links.map((link) => <a href={link.href}>{link.label}</a>)}
       </nav>
     </footer>

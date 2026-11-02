@@ -1,7 +1,11 @@
 ---
-import type { Publication } from '../content/site';
-type Props = { items: Publication[] };
-const { items } = Astro.props;
+import {
+  contributionLabels,
+  type Locale,
+  type Publication,
+} from '../content/site';
+type Props = { items: Publication[]; locale?: Locale };
+const { items, locale = 'en' } = Astro.props;
 ---
 
 <div class="publication-list">
@@ -19,7 +23,9 @@ const { items } = Astro.props;
               <p class="publication-meta">
                 <>
                   <span>{publication.venue}</span>
-                  <span>{publication.contribution}</span>
+                  <span>
+                    {contributionLabels[locale][publication.contribution]}
+                  </span>
                 </>
               </p>
             </>
