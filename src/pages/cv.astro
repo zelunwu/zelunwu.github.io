@@ -1,0 +1,60 @@
+---
+import PublicationList from '../components/PublicationList.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import Timeline from '../components/Timeline.astro';
+import {
+  education,
+  experience,
+  focusAreas,
+  profile,
+  publications,
+} from '../content/site';
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="CV · Zelun Wu" description={`Web CV for ${profile.name}.`}>
+  <header class="cv-header page-shell">
+    <div>
+      <p class="eyebrow">Curriculum vitae</p><h1>
+        {profile.name}
+        <span>{profile.nameZh}</span>
+      </h1><p>{profile.headline}</p>
+    </div><div class="cv-links">
+      {profile.links.map((link) => <a href={link.href}>{link.label} ↗</a>)}
+    </div>
+  </header>
+  <section class="section page-shell cv-section">
+    <SectionHeading
+      eyebrow="Experience"
+      title="Professional experience"
+    /><Timeline items={experience} />
+  </section>
+  <section class="section page-shell cv-section">
+    <SectionHeading eyebrow="Education" title="Education" /><Timeline
+      items={education}
+    />
+  </section>
+  <section class="section page-shell cv-section">
+    <SectionHeading
+      eyebrow="Expertise"
+      title="Research and engineering focus"
+    /><div class="cv-skills">
+      {
+        focusAreas.map((area) => (
+          <div>
+            <>
+              <h3>{area.title}</h3>
+              <p>{area.description}</p>
+            </>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+  <section class="section page-shell cv-section">
+    <SectionHeading
+      eyebrow="Research"
+      title="Selected publications"
+    /><PublicationList items={publications} />
+  </section>
+</BaseLayout>

@@ -1,0 +1,48 @@
+---
+import SectionHeading from '../components/SectionHeading.astro';
+import WorkCard from '../components/WorkCard.astro';
+import { focusAreas, selectedWork } from '../content/site';
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Selected work · Zelun Wu"
+  description="Selected public work in graphics systems and ocean science."
+>
+  <header class="page-intro page-shell">
+    <p class="eyebrow">Work</p><h1>Selected public work</h1><p>
+      Public products and peer-reviewed research, presented without confidential
+      implementation details or unsupported performance claims.
+    </p>
+  </header>
+  <section class="section page-shell">
+    <div class="work-grid expanded">
+      {
+        selectedWork.map((item, index) => (
+          <WorkCard item={item} index={index} />
+        ))
+      }
+    </div>
+  </section>
+  <section class="section section-tint">
+    <div class="page-shell">
+      <SectionHeading
+        eyebrow="Capabilities"
+        title="How the work connects"
+      /><div class="focus-grid">
+        {
+          focusAreas.map((area) => (
+            <article class="focus-card">
+              <>
+                <p>{area.eyebrow}</p>
+                <h3>{area.title}</h3>
+                <div class="focus-line" />
+                <span>{area.description}</span>
+              </>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>

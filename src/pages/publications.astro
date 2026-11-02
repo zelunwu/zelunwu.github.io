@@ -1,0 +1,27 @@
+---
+import PublicationList from '../components/PublicationList.astro';
+import { profile, publications } from '../content/site';
+import BaseLayout from '../layouts/BaseLayout.astro';
+const orcid = profile.links.find((link) => link.label === 'ORCID')?.href;
+---
+
+<BaseLayout
+  title="Publications · Zelun Wu"
+  description="Selected peer-reviewed publications by Zelun Wu."
+>
+  <header class="page-intro page-shell">
+    <p class="eyebrow">Publications</p><h1>Selected research</h1><p>
+      Peer-reviewed publications with verified bibliographic details. Visit
+      ORCID for the broader research record.
+    </p>{
+      orcid && (
+        <a class="text-link" href={orcid}>
+          Open ORCID <span aria-hidden="true">↗</span>
+        </a>
+      )
+    }
+  </header>
+  <section class="section page-shell">
+    <PublicationList items={publications} />
+  </section>
+</BaseLayout>

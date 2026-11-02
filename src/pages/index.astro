@@ -1,0 +1,106 @@
+---
+import HeroVisual from '../components/HeroVisual.astro';
+import PublicationList from '../components/PublicationList.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import WorkCard from '../components/WorkCard.astro';
+import {
+  focusAreas,
+  profile,
+  publications,
+  selectedWork,
+} from '../content/site';
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout>
+  <section class="hero page-shell">
+    <div class="hero-copy">
+      <p class="eyebrow">Researcher · Systems engineer</p>
+      <h1>From ocean dynamics to real-time GPU systems.</h1>
+      <p class="hero-lead">{profile.introduction}</p>
+      <div class="hero-actions">
+        <a class="button primary" href="/work/">Explore selected work</a><a
+          class="button secondary"
+          href="/publications/">Read publications</a
+        >
+      </div>
+      <div class="hero-meta">
+        <span>{profile.nameZh}</span><span>{profile.location}</span>
+      </div>
+    </div>
+    <HeroVisual />
+  </section>
+
+  <section class="section page-shell" aria-labelledby="focus-heading">
+    <SectionHeading
+      eyebrow="Focus"
+      title="One practice, multiple scales"
+      description="My work moves between physical systems, scientific models, graphics architecture, and GPU execution."
+    />
+    <div class="focus-grid" id="focus-heading">
+      {
+        focusAreas.map((area) => (
+          <article class="focus-card">
+            <>
+              <p>{area.eyebrow}</p>
+              <h3>{area.title}</h3>
+              <div class="focus-line" />
+              <span>{area.description}</span>
+            </>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="section section-tint" aria-labelledby="work-heading">
+    <div class="page-shell">
+      <SectionHeading
+        eyebrow="Selected work"
+        title="Public work across graphics and ocean science"
+        description="A deliberately small selection of public products and peer-reviewed research."
+      />
+      <div class="work-grid" id="work-heading">
+        {
+          selectedWork.map((item, index) => (
+            <WorkCard item={item} index={index} />
+          ))
+        }
+      </div>
+      <a class="text-link section-link" href="/work/"
+        >View the work archive <span aria-hidden="true">→</span></a
+      >
+    </div>
+  </section>
+
+  <section class="section page-shell" aria-labelledby="publications-heading">
+    <SectionHeading
+      eyebrow="Research"
+      title="Selected publications"
+      description="Peer-reviewed work in coastal carbon dynamics, remote sensing, and physical oceanography."
+    />
+    <div id="publications-heading">
+      <PublicationList items={publications.slice(0, 3)} />
+    </div>
+    <a class="text-link section-link" href="/publications/"
+      >View all selected publications <span aria-hidden="true">→</span></a
+    >
+  </section>
+
+  <section class="closing-statement">
+    <div class="page-shell">
+      <p class="eyebrow">Working principle</p><blockquote>
+        Understand the physical system. Define the contract. Measure the
+        evidence.
+      </blockquote><div class="closing-links">
+        {
+          profile.links.map((link) => (
+            <a href={link.href}>
+              {link.label} <span aria-hidden="true">↗</span>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,65 @@
+---
+import '../styles/global.css';
+import { profile } from '../content/site';
+
+type Props = { title?: string; description?: string };
+const {
+  title = `${profile.name} · ${profile.headline}`,
+  description = profile.introduction,
+} = Astro.props;
+const currentPath = Astro.url.pathname;
+const navigation = [
+  { label: 'Home', href: '/' },
+  { label: 'Work', href: '/work/' },
+  { label: 'Publications', href: '/publications/' },
+  { label: 'About', href: '/about/' },
+  { label: 'CV', href: '/cv/' },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#f7f6f2" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={Astro.url} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+      <a class="site-brand" href="/" aria-label="Zelun Wu, home"
+        ><span class="brand-mark" aria-hidden="true">ZW</span><span
+          >{profile.name}</span
+        ></a
+      >
+      <nav class="site-nav" aria-label="Primary navigation">
+        {
+          navigation.map(({ label, href }) => {
+            const active =
+              href === '/' ? currentPath === '/' : currentPath.startsWith(href);
+            return (
+              <a href={href} aria-current={active ? 'page' : undefined}>
+                {label}
+              </a>
+            );
+          })
+        }
+      </nav>
+    </header>
+    <main id="main-content"><slot /></main>
+    <footer class="site-footer">
+      <div><strong>{profile.name}</strong><span>{profile.headline}</span></div>
+      <nav aria-label="External links">
+        {profile.links.map((link) => <a href={link.href}>{link.label}</a>)}
+      </nav>
+    </footer>
+  </body>
+</html>
